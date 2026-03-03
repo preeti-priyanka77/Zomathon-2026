@@ -1,5 +1,5 @@
 """
-SmartCart v2.0 — LLM-Powered Recommendation Explainer (AI Edge)
+CSAO — LLM-Powered Recommendation Explainer (AI Edge)
 Generates natural language explanations for recommendations.
 
 Two modes:
@@ -237,7 +237,7 @@ def enrich_recommendations(
 # ── Demo ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("═" * 60)
-    print("SmartCart v2.0 — LLM Explainer Demo")
+    print("CSAO — LLM Explainer Demo")
     print("═" * 60)
 
     sample_recs = [

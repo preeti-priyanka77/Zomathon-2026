@@ -1,6 +1,6 @@
 """
-SmartCart v2.0 — Cart Transition Demo
-======================================
+CSAO — Cart Transition Demo
+============================
 Demonstrates how recommendations evolve dynamically as items are added to
 the cart, modelling the core challenge stated in the problem:
 
@@ -91,7 +91,7 @@ def _divider(char: str = "═", width: int = 72) -> str:
 
 def run_demo(k: int = 8) -> None:
     print(_divider())
-    print("  SmartCart v2.0 — Cart Transition Demo")
+    print("  CSAO — Cart Transition Demo")
     print("  North Indian Main → Salan/Side → Drink → Dessert")
     print(_divider())
     print(f"\n  User: {USER_ID}  |  Context: Tier-1, CBD, 1 PM, Summer\n")

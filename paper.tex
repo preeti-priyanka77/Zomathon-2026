@@ -25,11 +25,11 @@
 % ── Title ─────────────────────────────────────────────────────────────────────
 \begin{document}
 
-\title{SmartCart v2.0: A Context-Aware, Low-Latency Learning-to-Rank System\\
+\title{CSAO: A Context-Aware, Low-Latency Learning-to-Rank System\\
 for Real-Time Add-On Recommendation in Food Delivery}
 
 \author{
-  \IEEEauthorblockN{SmartCart Team}
+  \IEEEauthorblockN{CSAO Team}
   \IEEEauthorblockA{
     \textit{Zomathon 2026 --- Problem Statement 2}\\
     \textit{CSAO Rail Recommendation System}\\
@@ -41,7 +41,7 @@ for Real-Time Add-On Recommendation in Food Delivery}
 
 % ── Abstract ──────────────────────────────────────────────────────────────────
 \begin{abstract}
-We present \textbf{SmartCart v2.0}, a production-ready, context-aware
+We present \textbf{CSAO}, a production-ready, context-aware
 Learning-to-Rank (LTR) recommendation system designed to optimise the
 Cart Super Add-On (CSAO) rail in a large-scale food delivery platform.
 The system addresses the core challenge of recommending relevant add-on
@@ -96,7 +96,7 @@ to vegetarians. Sequential models (e.g., Transformers) would offer richer
 representations but impose inference latencies ($>$50\,ms per forward pass)
 incompatible with the production SLA at millions of daily requests.
 
-SmartCart v2.0 addresses these challenges through a carefully designed
+CSAO addresses these challenges through a carefully designed
 two-stage pipeline: a segment-aware FP-Growth candidate generator that narrows
 the item space from $\sim$2,800 to 50 candidates in $<$2\,ms, followed by a
 LightGBM LambdaRank model that jointly conditions on user, cart, item, and
@@ -352,7 +352,7 @@ The inference pipeline consists of two sequential stages designed to respect
 the 300\,ms end-to-end SLA:
 
 \begin{algorithm}
-\caption{SmartCart v2.0 Inference Pipeline}
+\caption{CSAO Inference Pipeline}
 \begin{algorithmic}[1]
 \REQUIRE user $u$, cart $c$, context $x$, restaurant menu $\mathcal{I}_r$
 \ENSURE ranked list $\mathcal{R}$ of $K=8$ add-on items
@@ -620,7 +620,7 @@ analysis reported here uses \texttt{test} (800,000 rows, capped for memory).
 \centering
 \begin{tabular}{lrrr}
 \toprule
-Metric & Baseline & SmartCart v2.0 & Lift \\
+Metric & Baseline & CSAO & Lift \\
 \midrule
 AUC            & ---    & \textbf{0.9700} & --- \\
 NDCG@8         & 0.3086 & \textbf{0.8764} & +184.0\% \\
@@ -730,7 +730,7 @@ vs.\ monsoon) suggests potential for season-specific re-ranking thresholds.
 The proposed online experiment compares:
 \begin{itemize}
   \item \textbf{Control (50\%)}: Top-8 globally popular items baseline
-  \item \textbf{Treatment (50\%)}: SmartCart v2.0 personalised recommendations
+  \item \textbf{Treatment (50\%)}: CSAO personalised recommendations
 \end{itemize}
 
 \textbf{Primary metric}: Average Order Value (AOV, \rupee).
@@ -839,7 +839,7 @@ Taking the lower bound:
 % ═══════════════════════════════════════════════════════════════════════════════
 
 A key requirement from the problem statement is that the CSAO rail must update
-dynamically as items are added or removed from the cart. SmartCart v2.0
+dynamically as items are added or removed from the cart. CSAO
 handles this via online feature recomputation: every time an item is added to
 cart $c$, the cart feature vector $\phi_c$ is recomputed in $<$1\,ms and fed
 back into the ranking pipeline.
@@ -940,7 +940,7 @@ metrics follows the framework advocated by \cite{deng2013improving}.
 \section{Conclusion}
 % ═══════════════════════════════════════════════════════════════════════════════
 
-We presented SmartCart v2.0, a production-ready, context-aware add-on
+We presented CSAO, a production-ready, context-aware add-on
 recommendation system achieving state-of-the-art ranking quality
 (NDCG@8 = 0.876, Precision@8 = 0.382, AUC = 0.970) while operating at
 P95 = 14.72\,ms---$20\times$ within the 300\,ms SLA. The system integrates

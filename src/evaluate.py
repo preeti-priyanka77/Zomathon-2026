@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SmartCart v2.0 - Pre-Processing Evaluation
+CSAO - Offline Evaluation Pipeline
 
 Evaluates the pre-processing pipeline against <300ms latency budget:
 - Data quality & completeness checks
@@ -372,7 +372,7 @@ def segment_analysis(
     k: int = 8,
 ) -> dict:
     """
-    Offline segment-level evaluation of SmartCart v2.0.
+    Offline segment-level evaluation of CSAO.
 
     Computes NDCG@k and Precision@k broken down by:
       • City tier (1 / 2 / 3)
@@ -565,7 +565,7 @@ def print_deployment_summary(
 def main():
     """Run full evaluation pipeline."""
     logger.info("\n" + "=" * 80)
-    logger.info("SmartCart v2.0 - PRE-PROCESSING EVALUATION")
+    logger.info("CSAO - OFFLINE EVALUATION PIPELINE")
     logger.info("=" * 80)
 
     try:

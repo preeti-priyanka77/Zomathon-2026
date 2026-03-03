@@ -1,5 +1,5 @@
 """
-SmartCart v2.0 — Cold Start Strategy
+CSAO — Cold Start Strategy
 Handles new users, new items, and sparse-history users.
 
 Three-tier fallback:

@@ -1,4 +1,4 @@
-# SmartCart v2.0 — `src/`
+# CSAO — `src/`
 
 All production Python modules for the CSAO recommendation system.
 Run any script directly from the repo root with `python src/<module>.py`.

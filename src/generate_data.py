@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SmartCart v2.0 - Synthetic Data Generation Pipeline
+CSAO - Synthetic Data Generation Pipeline
 
 Generates realistic food delivery order data with:
 - User behavior (loyalty, preferences, repeat patterns)
@@ -185,7 +185,7 @@ def generate_dataset(num_users, num_orders, output_dir):
                 base_price = random.randint(120, 500)
                 
                 # ============================================================
-                # NEW: Item Attributes for SmartCart v2.0
+                # Item Attributes
                 # ============================================================
                 # Vegetarian status (biased by cuisine)
                 is_vegetarian = (

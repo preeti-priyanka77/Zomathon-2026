@@ -1,5 +1,5 @@
 """
-SmartCart v2.0 — Online Latency Benchmark
+CSAO — Online Latency Benchmark
 Measures REAL end-to-end HTTP latency (not offline Python call time).
 
 Usage:
