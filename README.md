@@ -63,7 +63,7 @@ python src/cart_transition_demo.py
 
 ## 1. Executive Summary
 
-SmartCart v2.0 is a production-ready, multi-segment, low-latency add-on recommendation system designed for dynamic shopping carts.
+CSAO is a production-ready, multi-segment, low-latency add-on recommendation system designed for dynamic shopping carts.
 
 Unlike simple co-occurrence recommenders, v2.0 incorporates:
 
@@ -388,7 +388,7 @@ max_per_category = 3  →  guarantees categorical diversity
 
 **Measured Results vs Baseline:**
 
-| Metric | Baseline (Popular Items) | SmartCart v2.0 | Lift |
+| Metric | Baseline (Popular Items) | CSAO | Lift |
 |---|---|---|---|
 | Precision@8 | 0.1485 | 0.3818 | **+157.1%** |
 | NDCG@8 | 0.3086 | 0.8764 | **+184.0%** |
@@ -431,7 +431,7 @@ max_per_category = 3  →  guarantees categorical diversity
 
 **Control:** Top-8 globally popular items (baseline)
 
-**Treatment:** SmartCart v2.0 personalised recommendations
+**Treatment:** CSAO personalised recommendations
 
 **Primary KPIs:** AOV, add-on acceptance rate, CSAO rail attach rate
 
