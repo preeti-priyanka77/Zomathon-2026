@@ -27,6 +27,28 @@
 | **A/B annual revenue lift** | **₹5.1 Billion** |
 | **Experiment duration** | **14 days** (n=9,812/arm) |
 
+### Data Download
+
+The raw and processed datasets are **not included** in this repository. Download them from Google Drive before running any scripts:
+
+**[Download Data — Google Drive](https://drive.google.com/drive/folders/1ln_RfmE7Keh7GpMSj_zApuRt3zoqJBGi?usp=drive_link)**
+
+Place the downloaded contents into the `data/` directory so the structure matches:
+
+```
+data/
+  raw/
+    order_items_v2_full.csv
+    orders_v2_full.csv
+  processed/
+    fpgrowth_metadata.json
+    item_features.csv
+    orders_enriched.csv
+    user_features.csv
+```
+
+---
+
 ### How to Run
 
 ```bash
